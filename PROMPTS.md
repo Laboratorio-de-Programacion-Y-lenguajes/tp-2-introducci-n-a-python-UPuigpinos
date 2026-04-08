@@ -75,31 +75,32 @@ lo use tal cual debido a que era un codigo sencillo, utilizando el if para abarc
 
 ### 4 - diccionarios.py
 
-**Herramienta**: 
+**Herramienta**: Gemini Pro
 
 **Prompt usado**:
-> 
+>  Necesito generar unos 8 ejemplos de diccionarios en Python que representen personas. Cada uno tiene que tener las claves: nombre, apellido, edad y mail. Después de los ejemplos, mostrame cómo quedarían formateados en un solo string tipo: '[nombre] [apellido] ([edad]) - [mail]'. con el objetivo de programar una función mostrar_datos(dic) que haga eso mismo con cualquier persona."
 
 **Resultado obtenido**:
+Me dio una lista larga de diccionarios de prueba y me mostró el patrón del f-string para concatenar los valores. Me explicó que lo más seguro es usar las claves directas del diccionario dentro de las llave []
 
 
 **¿Lo usaste tal cual o lo modificaste?**
-
+lo use tal cual
 
 ---
 
 ### 5 - loops.py
 
-**Herramienta**: 
+**Herramienta**:  Gemini Pro
 
 **Prompt usado**:
-> 
+> Necesito armar una función repetir_palabra(palabra, cantidad) en Python para un TP, pero quiero que sea sólida. Antes de darme el código, ¿podrías hacerme un par de preguntas para refinar lo que necesito? Especialmente sobre cómo manejar números negativos o qué tipo de dato devolver, así no me manda ninguna en el pytest.
 
 **Resultado obtenido**:
-
+La IA me preguntó: 1. ¿Qué debería devolver si la cantidad es 0 o negativa (una lista vacía o un error)? 2. ¿La palabra tiene que estar en una lista o ser un solo string largo? 3. ¿Hay algún límite de memoria que deba considerar?
 
 **¿Lo usaste tal cual o lo modificaste?**
-
+lo use como referencia, ya que me dio una idea y luego me recordo sobre el caso borde y sus errores
 
 ---
 

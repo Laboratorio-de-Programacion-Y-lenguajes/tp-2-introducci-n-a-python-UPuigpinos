@@ -3,12 +3,14 @@
 # ============================================================
 
 
+from functools import cache
+
+
 def aplicar_funcion(lista: list, func) -> list:
     """
     Aplica func a cada elemento de la lista y retorna la nueva lista.
     """
-    # TU CÓDIGO AQUÍ
-    pass
+    return [func(x) for x in lista]
 
 
 def componer(f, g):
@@ -16,8 +18,7 @@ def componer(f, g):
     Retorna una nueva función que aplica g y luego f.
     Ejemplo: componer(f, g)(x) == f(g(x))
     """
-    # TU CÓDIGO AQUÍ
-    pass
+    return lambda x: f(g(x))
 
 
 def memoizar(func):
@@ -26,9 +27,11 @@ def memoizar(func):
     Si se llama con los mismos argumentos, retorna el resultado cacheado.
     """
     cache = {}
-    # TU CÓDIGO AQUÍ
-    pass
-
+    def wrapper(x):
+        if x not in cache:
+            cache[x] = func(x)
+        return cache[x]
+    return wrapper
 
 def reducir(lista: list, func, inicial):
     """
@@ -37,5 +40,13 @@ def reducir(lista: list, func, inicial):
     Ejemplo: reducir([1,2,3], lambda a,b: a+b, 0) -> 6
     NO uses functools.reduce
     """
-    # TU CÓDIGO AQUÍ
-    pass
+    resultado = inicial
+    for elemento in lista:
+        resultado = func(resultado, elemento)
+    return resultado
+def contar_palabra(texto: str, palabra: str) -> int:
+    """
+    Cuenta cuántas veces aparece una palabra en un texto (case-insensitive).
+    """
+    palabras = texto.lower().split()
+    return palabras.count(palabra.lower())
