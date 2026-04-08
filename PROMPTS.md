@@ -106,31 +106,31 @@ lo use como referencia, ya que me dio una idea y luego me recordo sobre el caso 
 
 ### 6 - funciones.py
 
-**Herramienta**: 
+**Herramienta**: Gemini Pro
 
 **Prompt usado**:
-> 
+> Necesito una función para contar cuántas veces aparece una palabra exacta en un texto, pero que no importe si está en mayúsculas o minúsculas. Despues de varias preguntas me dio varias opciones para usar y en base a ello decidi usar una, donde me explico las ventajas y deventajas de usar uno o el otro
 
 **Resultado obtenido**:
-
+Me explicó que regex es muy pesado para algo simple y que un for manual es más largo de escribir. Me recomendó .split() y .count() porque es lo más legible y eficiente en Python para este caso. También me dio una mano con la lógica de memoizar usando un diccionario como cache.
 
 **¿Lo usaste tal cual o lo modificaste?**
-
+Lo use como base para empezar pero sin utilizar biblotecas.
 
 ---
 
 ### 7 - operaciones.py
 
-**Herramienta**: 
+**Herramienta**: Gemini Pro 
 
 **Prompt usado**:
-> 
+> Necesito hacer una función operaciones(a, b) que me devuelva un diccionario con la suma, resta, multiplicación y división de dos números. Pero tengo un problema: si b es cero, la división explota. Me podés dar dos formas de resolver esto? Una usando un if común y otra usando try/except de Python.
 
 **Resultado obtenido**:
-
+La IA me mostró ambos enfoques. Me explicó que el if es "preventivo", pero que en Python se prefiere el try/except porque es más robusto. También me dio la lógica para el Cifrado César usando la función ord() y chr().
 
 **¿Lo usaste tal cual o lo modificaste?**
-
+Elegí el enfoque de try/except para la división, porque así cumplo con lo que se pide  en manejo de excepciones. Para el Cifrado César, seguí la lógica matemática que me pasó para que el desplazamiento siempre se mantenga dentro del abecedario.
 
 ---
 
@@ -139,5 +139,6 @@ lo use como referencia, ya que me dio una idea y luego me recordo sobre el caso 
 Respondé brevemente (3-5 oraciones):
 
 - ¿Qué aprendiste sobre cómo formular buenos prompts?
+
 - ¿En qué casos la IA fue útil y en cuáles no?
 - ¿Qué harías diferente la próxima vez?
